@@ -1,5 +1,5 @@
 import SwiftUI
-
+import Firebase
 struct ContentView: View {
     @State private var email = ""
     @State private var password = ""
@@ -49,7 +49,8 @@ struct ContentView: View {
                     .foregroundStyle(.white)
                 
                 Button {
-                    //sign up
+                    register()
+                
                 } label: {
                     Text("Sign up")
                         .bold()
@@ -63,6 +64,8 @@ struct ContentView: View {
                 .padding(.top)
                 .offset(y: 100)
                 Button {
+                    login()
+                    }
                     //login
                 } label: {
                     Text("Already have an account? Login")
@@ -77,6 +80,24 @@ struct ContentView: View {
             .frame(width: 350)
         }
         .ignoresSafeArea()
+    }
+    func login () {
+        Auth.auth().signIn(withEmail: email, password: password){ result, error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+        }
+    }
+    
+    
+    func register () {
+        Auth.auth().createUser(withEmail: email, password: password){ result, error in
+            if error != nil {
+                print(error!.localizedDescription
+            }
+            
+        }
     }
 }
 
@@ -98,5 +119,4 @@ extension View {
         }
     }
 }
-    
 
