@@ -12,7 +12,7 @@ import Firebase
 @main
 struct Sore: App {
     init() {
-        SoreApp.configure()
+        Sore.configure()
     }
     
     var body: some Scene {
