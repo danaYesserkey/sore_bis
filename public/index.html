@@ -4,26 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sore — Login / Register</title>
-
-    <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ -->
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <div class="container">
 
-    <!-- ЛОГО -->
     <img src="logo.jpg" class="logo" alt="sore">
 
     <h1>Sore App</h1>
 
-    <!-- ТАБЫ -->
     <div class="links">
         <a href="#" onclick="showTab('login')">Login</a>
         <a href="#" onclick="showTab('register')">Register</a>
     </div>
 
-    <!-- LOGIN TAB -->
+    <!-- LOGIN -->
     <div id="login" class="tab active">
         <form>
             <div class="form-group">
@@ -32,12 +28,13 @@
             <div class="form-group">
                 <input type="password" placeholder="Password" required />
             </div>
-            <!-- <button type="submit">Login</button> -->
-            <button onclick="loginUser()">Login</button>
+
+            <!-- КНОПКА ТИП SUBMIT -->
+            <button type="submit">Login</button>
         </form>
     </div>
 
-    <!-- REGISTER TAB -->
+    <!-- REGISTER -->
     <div id="register" class="tab">
         <form>
             <div class="form-group">
@@ -46,15 +43,14 @@
             <div class="form-group">
                 <input type="password" placeholder="Password" required />
             </div>
-            <!-- <button type="submit">Register</button> -->
-            <button onclick="registerUser()">Register</button>
+
+            <!-- ТАК ЖЕ SUBMIT -->
+            <button type="submit">Register</button>
         </form>
     </div>
 
 </div>
 
-<!-- ПОДКЛЮЧЕНИЕ JS -->
 <script src="script.js"></script>
-
 </body>
 </html>
