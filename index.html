@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sore — Login / Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <img src="logo.jpg" class="logo">
+
+    <h1>Welcome to sore</h1>
+
+    <div class="links">
+        <label for="tab-login">Login</label>
+        <label for="tab-register">Register</label>
+    </div>
+
+    <input type="radio" name="tabs" id="tab-login" class="hidden" checked>
+    <input type="radio" name="tabs" id="tab-register" class="hidden">
+
+    <form id="login" action="cgi-bin/login.py" method="POST">
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Password">
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <form id="register" action="cgi-bin/register.py" method="POST">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Name">
+        </div>
+
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Password">
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+</div>
+
+</body>
+</html>
+
+<!-- 
+cd ~/Desktop/sore-site
+python3 -m http.server 8000 
+--cgi -->
+
+<!-- 
+http://localhost:8000/index.html
+ -->
